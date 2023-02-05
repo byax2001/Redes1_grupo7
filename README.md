@@ -66,7 +66,7 @@
   Danny: 10.8.0.3
   Javier: 10.8.0.2
   Brandon: 10.8.0.4
-  Elyte: 
+  Elyte: 10.8.0.1
   ```
 
 ## Configuración del Software de VPN
