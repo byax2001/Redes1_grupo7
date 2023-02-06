@@ -31,7 +31,26 @@
 * Google Cloud Platform (GCP)
 
 ## Configuración de la red privada
+
+  ```
+  
+      sudo apt-get update
+
+      sudo apt-get upgrade
+
+      wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+
+      sudo bash openvpn-install.sh
+
+  ```
  
+ ![Descripción de la imagen](/imagenes/13.jpeg)
+  
+![Descripción de la imagen](/imagenes/11.jpeg)
+
+![Descripción de la imagen](/imagenes/12.jpeg)
+
+
  
 ## Pruebas de conexión PING y de la configuración del protocolo IP (ipconfig/ifconfig)
 ### Configuración del protocolo IP
@@ -62,6 +81,9 @@
 #### No. 4
 ![Descripción de la imagen](/imagenes/j2.jpeg)
 
+
+![Descripción de la imagen](/imagenes/x.jpeg)
+
   ```
   Danny: 10.8.0.3
   Javier: 10.8.0.2
@@ -78,4 +100,13 @@
 ![Descripción de la imagen](/imagenes/10.jpeg)
 
 ## Creación y configuración de la instancia en la plataforma de cloud
+
+ ![Descripción de la imagen](/imagenes/14.jpeg)
+ 
+ ![Descripción de la imagen](/imagenes/15.jpeg)
+  
+ ![Descripción de la imagen](/imagenes/16.jpeg)
+   
+ ![Descripción de la imagen](/imagenes/17.jpeg)
+ 
 
