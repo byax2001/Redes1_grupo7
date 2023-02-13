@@ -24,20 +24,20 @@ Pings entre los hosts.
 ---
 Topología local.  
 
-![](Imgs/DC_1.png)
+![](Imgs/DC_1.PNG)
 
 Configuración de la `VPC1`.  
 
-![](Imgs/DC_2.jpg)
+![](Imgs/DC_2.jpeg)
 
 Configuración de la `CLOUD` del compañero 2.
 
-![](Imgs/DC_3.png)
+![](Imgs/DC_3.PNG)
 
 Configuración de la `CLOUD` del compañero 3.
 
-![](Imgs/DC_4.png)
+![](Imgs/DC_4.PNG)
 
 Pings entre los hosts.
 
-![](Imgs/DC_6.jpg)
+![](Imgs/DC_6.jpeg)
