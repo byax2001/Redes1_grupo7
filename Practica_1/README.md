@@ -42,7 +42,7 @@ Pings entre los hosts.
 
 ![](Imgs/DC_6.jpeg)
 
-## **COMPAÑERO 3 - 201807428**
+## **COMPAÑERO 3 - 201800534**
 ---
 Topología local.  
 
