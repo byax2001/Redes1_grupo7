@@ -1,58 +1,21 @@
-## **DANNY**
-
-**Compañero 1**
-- Local: 30100
-- IPV4: 10.8.0.2
-- Remote: 30000
-
-**Compañero 3**
-- Local: 30101
-- IPV4: 10.8.0.4
-- Remote: 30201
-
-**Compañero 4**
-- Local: 30102
-- IPV4: 10.8.0.5
-- Remote: 30301
-
+## **COMPAÑERO 1 - 201807428**
 ---
+Topología local.  
 
-## **BRANDON**
+![](Imgs/JK_1.png)
 
-**Compañero 1**
-- Local: 30200
-- IPV4: 10.8.0.2
-- Remote: 30001
+Configuración de la `VPC1`.  
 
-**Compañero 2**
-- Local: 30201
-- IPV4: 10.8.0.3
-- Remote: 30101
+![](Imgs/JK_2.png)
 
-**Compañero 4**
-- Local: 30202
-- IPV4: 10.8.0.5
-- Remote: 30302
+Configuración de la `CLOUD` del compañero 2.
 
----
+![](Imgs/JK_3.png)
 
-## **JHON**
+Configuración de la `CLOUD` del compañero 3.
 
-**Compañero 1**
-- Local: 30300
-- IPV4: 10.8.0.2
-- Remote: 30002
+![](Imgs/JK_4.png)
 
-**Compañero 2**
-- Local: 30301
-- IPV4: 10.8.0.3
-- Remote: 30102
+Pings entre los hosts.
 
-**Compañero 3**
-- Local: 30302
-- IPV4: 10.8.0.4
-- Remote: 30202
-
-
-
-
+![](Imgs/JK_5.png)
