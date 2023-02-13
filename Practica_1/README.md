@@ -19,3 +19,25 @@ Configuración de la `CLOUD` del compañero 3.
 Pings entre los hosts.
 
 ![](Imgs/JK_5.png)
+
+## **COMPAÑERO 2 - 201709528**
+---
+Topología local.  
+
+![](Imgs/DC_1.png)
+
+Configuración de la `VPC1`.  
+
+![](Imgs/DC_2.jpg)
+
+Configuración de la `CLOUD` del compañero 2.
+
+![](Imgs/DC_3.png)
+
+Configuración de la `CLOUD` del compañero 3.
+
+![](Imgs/DC_4.png)
+
+Pings entre los hosts.
+
+![](Imgs/DC_6.jpg)
