@@ -44,11 +44,11 @@
 
   ```
  
- ![Descripción de la imagen](/imagenes/13.jpeg)
+ ![Descripción de la imagen](./imagenes/13.jpeg)
   
-![Descripción de la imagen](/imagenes/11.jpeg)
+![Descripción de la imagen](./imagenes/11.jpeg)
 
-![Descripción de la imagen](/imagenes/12.jpeg)
+![Descripción de la imagen](./imagenes/12.jpeg)
 
 
  
@@ -56,33 +56,33 @@
 ### Configuración del protocolo IP
 
 #### No. 1
-![Descripción de la imagen](/imagenes/1.jpeg)
+![Descripción de la imagen](./imagenes/1.jpeg)
 
 #### No. 2
-![Descripción de la imagen](/imagenes/2.jpeg)
+![Descripción de la imagen](./imagenes/2.jpeg)
 
 #### No. 3
-![Descripción de la imagen](/imagenes/3.jpeg)
+![Descripción de la imagen](./imagenes/3.jpeg)
 
 #### No. 4
-![Descripción de la imagen](/imagenes/j1.jpeg)
+![Descripción de la imagen](./imagenes/j1.jpeg)
 
 ### Pruebas de conexión PING
 
 #### No. 1
-![Descripción de la imagen](/imagenes/4.jpeg)
+![Descripción de la imagen](./imagenes/4.jpeg)
 
 #### No. 2
-![Descripción de la imagen](/imagenes/5.jpeg)
+![Descripción de la imagen](./imagenes/5.jpeg)
 
 #### No. 3
-![Descripción de la imagen](/imagenes/6.jpeg)
+![Descripción de la imagen](./imagenes/6.jpeg)
 
 #### No. 4
-![Descripción de la imagen](/imagenes/j2.jpeg)
+![Descripción de la imagen](./imagenes/j2.jpeg)
 
 
-![Descripción de la imagen](/imagenes/x.jpeg)
+![Descripción de la imagen](./imagenes/x.jpeg)
 
   ```
   Danny: 10.8.0.3
@@ -92,21 +92,21 @@
   ```
 
 ## Configuración del Software de VPN
-![Descripción de la imagen](/imagenes/7.jpeg)
-![Descripción de la imagen](/imagenes/8.jpeg)
-![Descripción de la imagen](/imagenes/9.jpeg)
+![Descripción de la imagen](./imagenes/7.jpeg)
+![Descripción de la imagen](./imagenes/8.jpeg)
+![Descripción de la imagen](./imagenes/9.jpeg)
 
 ## Integrantes del grupo IAM
-![Descripción de la imagen](/imagenes/10.jpeg)
+![Descripción de la imagen](./imagenes/10.jpeg)
 
 ## Creación y configuración de la instancia en la plataforma de cloud
 
- ![Descripción de la imagen](/imagenes/14.jpeg)
+ ![Descripción de la imagen](./imagenes/14.jpeg)
  
- ![Descripción de la imagen](/imagenes/15.jpeg)
+ ![Descripción de la imagen](./imagenes/15.jpeg)
   
- ![Descripción de la imagen](/imagenes/16.jpeg)
+ ![Descripción de la imagen](./imagenes/16.jpeg)
    
- ![Descripción de la imagen](/imagenes/17.jpeg)
+ ![Descripción de la imagen](./imagenes/17.jpeg)
  
 
