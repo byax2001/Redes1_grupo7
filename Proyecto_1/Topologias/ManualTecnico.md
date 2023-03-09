@@ -8,19 +8,20 @@
 
 Nota: /24 es una notación de máscara subred. Tome en cuenta que esto es quivalente a 255.255.255.0.
 
-## **JAVSKOW**
+
+## **DANNY (Area de Trabajo)**
 ~~~cli
 
 ~~~
 
 
-## **DANNY**
+## **BRANDON (Backbone)**
 ~~~cli
 
 ~~~
 
 
-## **BRANDON**
+## **JAVSKOW (Zona de Servidores)**
 ~~~cli
 
 ~~~
