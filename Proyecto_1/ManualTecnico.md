@@ -26,6 +26,14 @@
       - [**VPC - RRHHH 4**](#vpc---rrhhh-4)
       - [**VPC - Informatica 3**](#vpc---informatica-3)
     - [**Comprobaciones**](#comprobaciones)
+  - [Topología 2: Backbone](#topología-2-backbone)
+    - [Topologia](#topologia)
+    - [**Configuraciones**](#configuraciones-1)
+      - [**ESW4**](#esw4-1)
+      - [**ESW5**](#esw5)
+      - [**ESW6**](#esw6)
+      - [**ESW7**](#esw7)
+    - [Comprobaciones](#comprobaciones-1)
 
 ## **Tabla 1.0**
 | **VLAN** | **#VLAN** | **Dirección de Red** | **Gateway** |
@@ -308,3 +316,168 @@ Esta topología se utiliza para la conexión de los servidores web de la empresa
     ![](img/5.png)
 
 
+## Topología 2: Backbone
+Zona encargada de conectar y administrar el área de trabajo con la zona de servidores, teniendo nodos altamente redundantes cuya finalidad fue brindar una conectividad el 100% del tiempo.
+
+### Topologia
+
+![topo](https://user-images.githubusercontent.com/63923585/224522610-67f955a1-fc4a-4daf-b2c2-9edcd9d89dba.jpeg)
+
+### **Configuraciones**
+#### **ESW4**
+
+- Creacion Vlans
+
+    ~~~bash
+    conf t
+    vlan 10
+    name RRHH
+    exit
+     vlan 20
+    name Informatica
+    exit
+    vlan 30
+    name Contabilidad
+    exit
+    vlan 40
+    name Ventas
+    exit
+    ~~~
+
+- Configuración VTP.
+
+    ~~~bash
+    conf t
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    ~~~
+
+- Configuración Trunks
+    ~~~bash
+    conf t
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    ~~~
+
+- Configuración Vtp
+    ~~~bash
+        conf t
+        vtp domain GRUPO7
+        vtp password grupo7
+        vtp version 2
+        vtp mode server
+        end
+        sh vtp status
+    ~~~
+
+- Root Bridge
+    ~~~bash
+        conf t
+        spanning-tree vlan 1 root primary
+        spanning-tree vlan 10 root primary
+        spanning-tree vlan 20 root primary
+        spanning-tree vlan 30 root primary
+        spanning-tree vlan 40 root primary
+    ~~~
+
+#### **ESW5**
+
+- Configuración Trunks
+    ~~~bash
+    conf t
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/3
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/0
+    switchport mode access
+    switchport access vlan 20
+    ~~~
+
+- Configuración Vtp
+    ~~~bash
+    conf t
+    vtp domain GRUPO7
+    vtp password grupo7
+    vtp version 2
+    vtp mode client
+    end
+    sh vtp status
+    ~~~
+
+#### **ESW6**
+
+- Configuración Trunks
+  
+    ~~~bash
+    conf t
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    ~~~
+
+- Configuración Vtp
+    ~~~bash
+    conf t
+    vtp domain GRUPO7
+    vtp password grupo7
+    vtp version 2
+    vtp mode client
+    end
+    sh vtp status
+    ~~~
+
+#### **ESW7**
+
+- Configuración Trunks
+    ~~~bash
+    conf t
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/3
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    ~~~
+
+- Configuración Vtp
+    ~~~bash
+    conf t
+    vtp domain GRUPO7
+    vtp password grupo7
+    vtp version 2
+    vtp mode client
+    end
+    sh vtp status
+    ~~~
+
+### Comprobaciones
+![pingred2](https://user-images.githubusercontent.com/63923585/224522606-374f4ad2-c228-4c3e-b312-9e78d0e17d22.jpeg)
