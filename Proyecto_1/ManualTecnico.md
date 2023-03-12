@@ -12,11 +12,23 @@
   - [**INDICE**](#indice)
   - [**Tabla 1.0**](#tabla-10)
   - [**Zona de Servidores**](#zona-de-servidores)
-    - [**Topología**](#topología)
-    - [**Configuraciones**](#configuraciones)
+    - [**Topología 1**](#topología-1)
+  - [**Configuraciones**](#configuraciones)
       - [**ESW1**](#esw1)
       - [**ESW2**](#esw2)
       - [**ESW3**](#esw3)
+      - [**VPC - RRHH\_1**](#vpc---rrhh_1)
+      - [**VPC - RRHH\_2**](#vpc---rrhh_2)
+      - [**VPC - Conta\_1**](#vpc---conta_1)
+      - [**VPC - Conta\_2**](#vpc---conta_2)
+      - [**VPC - Ventas\_1**](#vpc---ventas_1)
+      - [**VPC - Informatica\_1**](#vpc---informatica_1)
+    - [**Comprobaciones**](#comprobaciones)
+    - [**Topología**](#topología)
+    - [**Configuraciones**](#configuraciones-1)
+      - [**ESW1**](#esw1-1)
+      - [**ESW2**](#esw2-1)
+      - [**ESW3**](#esw3-1)
       - [**ESW4**](#esw4)
       - [**VPC - Ventas 2**](#vpc---ventas-2)
       - [**VPC - Ventas 3**](#vpc---ventas-3)
@@ -25,16 +37,16 @@
       - [**VPC - RRHHH 3**](#vpc---rrhhh-3)
       - [**VPC - RRHHH 4**](#vpc---rrhhh-4)
       - [**VPC - Informatica 3**](#vpc---informatica-3)
-    - [**Comprobaciones**](#comprobaciones)
+    - [**Comprobaciones**](#comprobaciones-1)
   - [Topología 2: Backbone](#topología-2-backbone)
     - [Topologia](#topologia)
-    - [**Configuraciones**](#configuraciones-1)
+    - [**Configuraciones**](#configuraciones-2)
       - [**ESW4**](#esw4-1)
       - [**ESW5**](#esw5)
       - [**ESW6**](#esw6)
       - [**ESW7**](#esw7)
       - [VPC Informatica 2](#vpc-informatica-2)
-    - [Comprobaciones](#comprobaciones-1)
+    - [Comprobaciones](#comprobaciones-2)
 
 ## **Tabla 1.0**
 | **VLAN** | **#VLAN** | **Dirección de Red** | **Gateway** |
@@ -45,6 +57,223 @@
 | Ventas | 40 | 192.168.74.0/24 | 192.168.74.1 |
 
 ## **Zona de Servidores**
+
+### **Topología 1**
+La estructura de red que se utiliza para conectar los servidores web se llama topología, pero debido a que estos servidores están siempre activos, esta estructura puede ser muy pesada para manejar. Para abordar este problema, se implementa una configuración especial llamada "nodo maestro-esclavo" que ayuda a distribuir la carga de trabajo entre los servidores de manera equilibrada.
+
+![](img/Topologia1_201709528.PNG)
+## **Configuraciones**
+#### **ESW1**
+- Configuración VTP.
+
+    ~~~bash
+    conf t
+    vtp domain GRUPO7
+    vtp password grupo7
+    vtp version 2
+    vtp mode client
+    end
+    ~~~
+
+- Configuración de puertos (TRUNK/ACCESS).
+
+    ~~~bash
+    conf t
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    end
+    ~~~
+
+- Guardar configuración.
+
+    ~~~bash
+    copy running-config startup-config
+    ~~~
+
+- Verificar configuraciones.
+
+    ~~~bash
+    sh int tr
+    sh vtp status
+    sh vlan-sw
+    sh spanning-tree brief
+    ~~~
+#### **ESW2**
+- Configuración VTP.
+
+    ~~~bash
+    conf t
+    vtp domain GRUPO7
+    vtp password grupo7
+    vtp version 2
+    vtp mode client
+    end
+    ~~~
+
+- Configuración de puertos (TRUNK/ACCESS).
+
+    ~~~bash
+    conf t
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode access
+    switchport access vlan 10
+    int f1/4
+    switchport mode access
+    switchport access vlan 10
+    int f1/3
+    switchport mode access
+    switchport access vlan 30
+    end
+    ~~~
+
+- Guardar configuración.
+
+    ~~~bash
+    copy running-config startup-config
+    ~~~
+
+- Verificar configuraciones.
+
+    ~~~bash
+    sh int tr
+    sh vtp status
+    sh vlan-sw
+    sh spanning-tree brief
+    ~~~
+
+#### **ESW3**
+- Configuración VTP.
+
+    ~~~bash
+    conf t
+    vtp domain GRUPO7
+    vtp password grupo7
+    vtp version 2
+    vtp mode client
+    end
+    ~~~
+
+- Configuración de puertos (TRUNK/ACCESS).
+
+    ~~~bash
+    conf t
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/1
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    int f1/2
+    switchport mode access
+    switchport access vlan 30
+    int f1/3
+    switchport mode access
+    switchport access vlan 40
+    int f1/4
+    switchport mode access
+    switchport access vlan 20
+    end
+    ~~~
+
+- Guardar configuración.
+
+    ~~~bash
+    copy running-config startup-config
+    ~~~
+
+- Verificar configuraciones.
+
+    ~~~bash
+    sh int tr
+    sh vtp status
+    sh vlan-sw
+    sh spanning-tree brief
+    ~~~
+
+#### **VPC - RRHH_1**
+- Configurar IP, MAC, GATEAWAY.
+
+    ~~~bash
+    ip 192.168.71.2 255.255.255.0 192.168.71.1
+    save
+    sh ip
+    ~~~
+
+#### **VPC - RRHH_2**
+- Configurar IP, MAC, GATEAWAY.
+
+    ~~~bash
+    ip 192.168.71.3 255.255.255.0 192.168.71.1
+    save
+    sh ip
+    ~~~
+
+#### **VPC - Conta_1**
+- Configurar IP, MAC, GATEAWAY.
+
+    ~~~bash
+    ip 192.168.73.2 255.255.255.0 192.168.73.1
+    save
+    sh ip
+    ~~~
+
+#### **VPC - Conta_2**
+- Configurar IP, MAC, GATEAWAY.
+
+    ~~~bash
+    ip 192.168.73.3 255.255.255.0 192.168.73.1
+    save
+    sh ip
+    ~~~
+
+#### **VPC - Ventas_1**
+- Configurar IP, MAC, GATEAWAY.
+
+    ~~~bash
+    ip 192.168.74.2 255.255.255.0 192.168.74.1
+    save
+    sh ip
+    ~~~
+
+#### **VPC - Informatica_1**
+- Configurar IP, MAC, GATEAWAY.
+
+    ~~~bash
+    ip 192.168.72.2 255.255.255.0 192.168.72.1
+    save
+    sh ip
+    ~~~
+
+### **Comprobaciones**
+- Ventas
+
+    ![](img/ping_Ventas.PNG)
+
+- Contabilidad
+
+    ![](img/ping_Conta.PNG)
+
+- RRHH
+
+    ![](img/ping_Recursos_4_5.PNG)
+
+- Informatica
+
+    ![](img/ping_informticas.PNG)
+
 
 ### **Topología**
 Esta topología se utiliza para la conexión de los servidores web de la empresa. Dado que estos servidores están siempre activos, esta topología se vuelve extremadamente pesada. Por lo que se implementa un nodo maestro-esclavo para equilibrar la carga del mismo.
