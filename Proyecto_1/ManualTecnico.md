@@ -11,7 +11,7 @@
   - [**Integrantes**](#integrantes)
   - [**INDICE**](#indice)
   - [**Tabla 1.0**](#tabla-10)
-  - [**Area de Trbajo**](#area-de-trbajo)
+  - [**Area de Trabajo**](#area-de-trabajo)
     - [**Topología 1**](#topología-1)
   - [**Configuraciones**](#configuraciones)
       - [**ESW1**](#esw1)
@@ -57,7 +57,7 @@
 | Contabilidad | 30 | 192.168.73.0/24 | 192.168.73.1 |
 | Ventas | 40 | 192.168.74.0/24 | 192.168.74.1 |
 
-## **Area de Trbajo**
+## **Area de Trabajo**
 ### **Topología 1**
 La estructura de red que se utiliza para conectar los servidores web se llama topología, pero debido a que estos servidores están siempre activos, esta estructura puede ser muy pesada para manejar. Para abordar este problema, se implementa una configuración especial llamada "nodo maestro-esclavo" que ayuda a distribuir la carga de trabajo entre los servidores de manera equilibrada.
 
