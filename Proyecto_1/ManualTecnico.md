@@ -11,7 +11,7 @@
   - [**Integrantes**](#integrantes)
   - [**INDICE**](#indice)
   - [**Tabla 1.0**](#tabla-10)
-  - [**Zona de Servidores**](#zona-de-servidores)
+  - [**Area de Trbajo**](#area-de-trbajo)
     - [**Topología 1**](#topología-1)
   - [**Configuraciones**](#configuraciones)
       - [**ESW1**](#esw1)
@@ -24,6 +24,7 @@
       - [**VPC - Ventas\_1**](#vpc---ventas_1)
       - [**VPC - Informatica\_1**](#vpc---informatica_1)
     - [**Comprobaciones**](#comprobaciones)
+  - [**Zona de Servidores**](#zona-de-servidores)
     - [**Topología**](#topología)
     - [**Configuraciones**](#configuraciones-1)
       - [**ESW1**](#esw1-1)
@@ -56,8 +57,7 @@
 | Contabilidad | 30 | 192.168.73.0/24 | 192.168.73.1 |
 | Ventas | 40 | 192.168.74.0/24 | 192.168.74.1 |
 
-## **Zona de Servidores**
-
+## **Area de Trbajo**
 ### **Topología 1**
 La estructura de red que se utiliza para conectar los servidores web se llama topología, pero debido a que estos servidores están siempre activos, esta estructura puede ser muy pesada para manejar. Para abordar este problema, se implementa una configuración especial llamada "nodo maestro-esclavo" que ayuda a distribuir la carga de trabajo entre los servidores de manera equilibrada.
 
@@ -274,7 +274,7 @@ La estructura de red que se utiliza para conectar los servidores web se llama to
 
     ![](img/ping_informticas.PNG)
 
-
+## **Zona de Servidores**
 ### **Topología**
 Esta topología se utiliza para la conexión de los servidores web de la empresa. Dado que estos servidores están siempre activos, esta topología se vuelve extremadamente pesada. Por lo que se implementa un nodo maestro-esclavo para equilibrar la carga del mismo.
 
