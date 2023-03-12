@@ -33,6 +33,7 @@
       - [**ESW5**](#esw5)
       - [**ESW6**](#esw6)
       - [**ESW7**](#esw7)
+      - [VPC Informatica 2](#vpc-informatica-2)
     - [Comprobaciones](#comprobaciones-1)
 
 ## **Tabla 1.0**
@@ -478,6 +479,12 @@ Zona encargada de conectar y administrar el área de trabajo con la zona de serv
     end
     sh vtp status
     ~~~
-
+#### VPC Informatica 2
+- Configuración Ip
+    ~~~bash
+    ip 192.168.72.3 255.255.255.0 192.168.72.1
+    save
+    ~~~
 ### Comprobaciones
+
 ![pingred2](https://user-images.githubusercontent.com/63923585/224522606-374f4ad2-c228-4c3e-b312-9e78d0e17d22.jpeg)
