@@ -574,21 +574,6 @@ Zona encargada de conectar y administrar el área de trabajo con la zona de serv
     exit
     ~~~
 
-- Configuración VTP.
-
-    ~~~bash
-    conf t
-    int f1/1
-    switchport mode trunk
-    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
-    int f1/2
-    switchport mode trunk
-    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
-    int f1/0
-    switchport mode trunk
-    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
-    ~~~
-
 - Configuración Trunks
     ~~~bash
     conf t
