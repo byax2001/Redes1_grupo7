@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes
 # **MANUAL TÉCNICO - GRUPO 7**
 ## **Integrantes**
 | **CARNET** | **NOMBRE** | 
@@ -11,37 +6,25 @@
 | 201709528 | Danny Eduardo Cuxum Sánchez  |
 | 201800534 | Brandon Oswaldo Yax Campos  |
 
-<<<<<<< Updated upstream
-## **INDICE**
-- [**MANUAL TÉCNICO - GRUPO 7**](#manual-técnico---grupo-7)
-  - [**Integrantes**](#integrantes)
-  - [**INDICE**](#indice)
-  - [**Tabla 1.0**](#tabla-10)
-  - [TOPO 1](#topo-1)
-  - [TOPO 2](#topo-2)
-  - [TOPO 3](#topo-3)
 
-## **Tabla 1.0**
-| **VLAN** | **#VLAN** | **Dirección de Red** | **Gateway** |
-| :-- | :-- | :-- |:-- |
-=======
-
-## **Tabla 1.0**
+## **Tabla Topologia 1**
 | **Direccion de Red ** | **#Mascara de Red** | **Primera IP Asignable ** | **Ultima IP Asignable** | **Direccion de BROADCAST** | ** Total Host** | **Cantidad de Host **|
 | :-- | :-- | :-- |:-- | :-- | :-- |:-- |
->>>>>>> Stashed changes
-| RRHH | 10 | 192.168.71.0/24 | 192.168.71.1 |
-| Informatica | 20 | 192.168.72.0/24 | 192.168.72.1 |
-| Contabilidad | 30 | 192.168.73.0/24 | 192.168.73.1 |
-| Ventas | 40 | 192.168.74.0/24 | 192.168.74.1 |
+| 192.168.75.0 | 255.255.255.248 ó /29 | 192.168.75.1 | 192.168.75.6 |192.168.75.7|8|7 |
+
+## **Asignacion de IP**
+
+| DISPOSITIVO | INTERFAZ | DIRECCIÓN IP | MASCARA DE RED | GATEWAY       |
+| ----------- | -------- | ------------| --------------| -------------|
+| R1          | F3/0     | 192.168.47.1| 255.255.255.240 ó /28 | N/A |
+| PC1         | E0       | 192.168.47.2| 255.255.255.240 ó /28 | 192.168.47.1 |
+| PC2         | E1       | 192.168.47.3| 255.255.255.240 ó /28 | 192.168.47.1 |
+| PC3         | E2       | 192.168.47.4| 255.255.255.240 ó /28 | 192.168.47.1 |
+| PC4         | E3       | 192.168.47.5| 255.255.255.240 ó /28 | 192.168.47.1 |
+| PC5         | E4       | 192.168.47.6| 255.255.255.240 ó /28 | 192.168.47.1 |
+| PC6         | E5       | 192.168.47.7| 255.255.255.240 ó /28 | 192.168.47.1 |
 
 
-<<<<<<< Updated upstream
-
-
-
-=======
->>>>>>> Stashed changes
 EXTRAS:
 ~~~bash
 sh ip ro
