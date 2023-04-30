@@ -384,3 +384,90 @@ save
 ---
 
 ## TOPO 3
+
+R1:
+~~~bash
+conf t
+int f0/0
+ip address 10.7.0.22 255.255.255.252
+no shut
+exit
+int f1/0
+ip address 10.7.0.18 255.255.255.252
+no shut
+exit
+int f3/0
+ip address 192.168.75.1 255.255.255.248
+no shut
+exit
+
+router ospf 1
+network 10.7.0.20 0.0.0.3 area 1
+network 10.7.0.16 0.0.0.3 area 1
+network 192.168.75.0 0.0.0.7 area 1
+end
+
+copy running-config startup-config
+~
+
+ESW1:
+~~~bash
+conf t
+int f1/0
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+exit
+int f1/1
+switchport mode access
+switchport access vlan 10
+int f1/2
+switchport mode access
+switchport access vlan 40
+int f1/3
+switchport mode access
+switchport access vlan 30
+int f1/4
+switchport mode access
+switchport access vlan 20
+exit
+
+vlan 10
+name RHUMANOS
+exit
+vlan 20
+name CONTABILIDAD
+exit
+vlan 30
+name VENTAS
+exit
+vlan 40
+name INFORMATICA
+exit
+end
+
+copy running-config startup-config
+~
+
+PC7:
+~~~bash
+ip 192.168.75.2/29 192.168.75.1
+save
+~
+
+PC8:
+~~~bash
+ip 192.168.75.3/29 192.168.75.1
+save
+~
+
+PC9:
+~~~bash
+ip 192.168.75.4/29 192.168.75.1
+save
+~
+
+PC10:
+~~~bash
+ip 192.168.75.5/29 192.168.75.1
+save
+~
