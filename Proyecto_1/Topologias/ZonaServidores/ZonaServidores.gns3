@@ -426,7 +426,7 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f1/3",
                             "x": 7,
-                            "y": -12
+                            "y": -11
                         },
                         "node_id": "b9c83656-1fef-4b37-bb4b-a89524c9faa1",
                         "port_number": 3
@@ -442,38 +442,6 @@
                         },
                         "node_id": "89dfdf01-1706-4dff-8143-460ae607a562",
                         "port_number": 0
-                    }
-                ],
-                "suspend": false
-            },
-            {
-                "filters": {},
-                "link_id": "14bf93dc-ac65-49af-87d7-3f89c3e198ab",
-                "link_style": {},
-                "nodes": [
-                    {
-                        "adapter_number": 1,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "f1/0",
-                            "x": 65,
-                            "y": 22
-                        },
-                        "node_id": "b9c83656-1fef-4b37-bb4b-a89524c9faa1",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "UDP tunnel 1",
-                            "x": 0,
-                            "y": 36
-                        },
-                        "node_id": "bfe31b3c-542d-4cfb-8c3a-c6834a3066b8",
-                        "port_number": 3
                     }
                 ],
                 "suspend": false
@@ -566,10 +534,42 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e0",
                             "x": 44,
-                            "y": -8
+                            "y": -7
                         },
                         "node_id": "5cc17d73-85b6-4143-972e-aa48c685cc20",
                         "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "14ff844a-4ba4-4f69-bea2-b0522c6f6d72",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f1/0",
+                            "x": 65,
+                            "y": 23
+                        },
+                        "node_id": "b9c83656-1fef-4b37-bb4b-a89524c9faa1",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "UDP tunnel 1",
+                            "x": 0,
+                            "y": 35
+                        },
+                        "node_id": "bfe31b3c-542d-4cfb-8c3a-c6834a3066b8",
+                        "port_number": 3
                     }
                 ],
                 "suspend": false
@@ -686,7 +686,7 @@
                 "symbol": ":/symbols/multilayer_switch.svg",
                 "template_id": "c257bce4-8aa5-405b-a1d1-b4919ec91cef",
                 "width": 51,
-                "x": -726,
+                "x": -727,
                 "y": 22,
                 "z": 1
             },
@@ -976,7 +976,7 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": -931,
+                "x": -930,
                 "y": -193,
                 "z": 1
             },
@@ -1063,7 +1063,7 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": -505,
+                "x": -504,
                 "y": 186,
                 "z": 1
             },
@@ -1128,7 +1128,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 71,
@@ -1220,7 +1220,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5003,
+                "console": 5028,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
