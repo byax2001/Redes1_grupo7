@@ -408,9 +408,10 @@ network 192.168.75.0 0.0.0.7 area 1
 end
 
 copy running-config startup-config
-~
+~~~
 
 ESW1:
+
 ~~~bash
 conf t
 int f1/0
@@ -446,28 +447,28 @@ exit
 end
 
 copy running-config startup-config
-~
+~~~
 
 PC7:
 ~~~bash
 ip 192.168.75.2/29 192.168.75.1
 save
-~
+~~~
 
 PC8:
 ~~~bash
 ip 192.168.75.3/29 192.168.75.1
 save
-~
+~~~
 
 PC9:
 ~~~bash
 ip 192.168.75.4/29 192.168.75.1
 save
-~
+~~~
 
 PC10:
 ~~~bash
 ip 192.168.75.5/29 192.168.75.1
 save
-~
+~~~
