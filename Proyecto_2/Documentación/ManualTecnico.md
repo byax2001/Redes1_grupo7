@@ -1,3 +1,32 @@
+# **MANUAL TÉCNICO - GRUPO 7**
+## **Integrantes**
+| **CARNET** | **NOMBRE** | 
+|:-: |:-- |
+| 201807428 | Wilson Kevin Javier Chávez Cabrera |
+| 201709528 | Danny Eduardo Cuxum Sánchez  |
+| 201800534 | Brandon Oswaldo Yax Campos  |
+
+## **INDICE**
+- [**MANUAL TÉCNICO - GRUPO 7**](#manual-técnico---grupo-7)
+  - [**Integrantes**](#integrantes)
+  - [**INDICE**](#indice)
+  - [**Tabla 1.0**](#tabla-10)
+  - [TOPO 1](#topo-1)
+  - [TOPO 2](#topo-2)
+  - [TOPO 3](#topo-3)
+
+## **Tabla 1.0**
+| **VLAN** | **#VLAN** | **Dirección de Red** | **Gateway** |
+| :-- | :-- | :-- |:-- |
+| RRHH | 10 | 192.168.71.0/24 | 192.168.71.1 |
+| Informatica | 20 | 192.168.72.0/24 | 192.168.72.1 |
+| Contabilidad | 30 | 192.168.73.0/24 | 192.168.73.1 |
+| Ventas | 40 | 192.168.74.0/24 | 192.168.74.1 |
+
+
+
+
+
 EXTRAS:
 ~~~bash
 sh ip ro
