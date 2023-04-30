@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 # **MANUAL TÉCNICO - GRUPO 7**
 ## **Integrantes**
 | **CARNET** | **NOMBRE** | 
@@ -6,6 +11,7 @@
 | 201709528 | Danny Eduardo Cuxum Sánchez  |
 | 201800534 | Brandon Oswaldo Yax Campos  |
 
+<<<<<<< Updated upstream
 ## **INDICE**
 - [**MANUAL TÉCNICO - GRUPO 7**](#manual-técnico---grupo-7)
   - [**Integrantes**](#integrantes)
@@ -18,15 +24,24 @@
 ## **Tabla 1.0**
 | **VLAN** | **#VLAN** | **Dirección de Red** | **Gateway** |
 | :-- | :-- | :-- |:-- |
+=======
+
+## **Tabla 1.0**
+| **Direccion de Red ** | **#Mascara de Red** | **Primera IP Asignable ** | **Ultima IP Asignable** | **Direccion de BROADCAST** | ** Total Host** | **Cantidad de Host **|
+| :-- | :-- | :-- |:-- | :-- | :-- |:-- |
+>>>>>>> Stashed changes
 | RRHH | 10 | 192.168.71.0/24 | 192.168.71.1 |
 | Informatica | 20 | 192.168.72.0/24 | 192.168.72.1 |
 | Contabilidad | 30 | 192.168.73.0/24 | 192.168.73.1 |
 | Ventas | 40 | 192.168.74.0/24 | 192.168.74.1 |
 
 
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
 EXTRAS:
 ~~~bash
 sh ip ro
