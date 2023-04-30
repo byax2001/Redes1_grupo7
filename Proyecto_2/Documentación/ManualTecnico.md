@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # **MANUAL TÉCNICO - GRUPO 7**
 ## **Integrantes**
 | **CARNET** | **NOMBRE** | 
@@ -25,6 +26,8 @@
 | PC6         | E5       | 192.168.47.7| 255.255.255.240 ó /28 | 192.168.47.1 |
 
 
+=======
+>>>>>>> Stashed changes
 EXTRAS:
 ~~~bash
 sh ip ro
