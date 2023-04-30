@@ -7,6 +7,27 @@
 | 201800534 | Brandon Oswaldo Yax Campos  |
 
 
+## Requerimientos para instalar GNS3
+
+Sí, los requisitos mínimos para instalar GNS3 son los siguientes:
+
+* Sistema operativo: Windows 7 o superior, o Ubuntu 18.04 LTS o superior.
+
+* Procesador: Intel Pentium 4 o superior.
+    RAM: 2 GB como mínimo, se recomienda 4 GB o más para mejores resultados.
+
+* Espacio en disco: 250 MB para la instalación de GNS3, y espacio adicional para las imágenes de los dispositivos y los archivos de configuración.
+
+* Tarjeta de red: al menos una interfaz de red Ethernet (para los dispositivos virtuales).
+
+* Software adicional: GNS3 requiere la instalación de software adicional para la emulación de dispositivos, como Dynamips (para routers Cisco IOS) o QEMU (para dispositivos virtuales de otros fabricantes).
+
+También se recomienda tener conocimientos básicos en redes de computadoras y en la configuración de dispositivos de red.
+
+![](Imagenes/gns3.png)
+
+
+
 ## **Tabla Topologia 1**
 
 | **Direccion de Red ** | **#Mascara de Red** | **Primera IP Asignable ** | **Ultima IP Asignable** | **Direccion de BROADCAST** | ** Total Host** | **Cantidad de Host **|
@@ -48,7 +69,11 @@ sh vlan-sw
 
 ---
 
+
+
 ## TOPO 1
+
+![](Imagenes/TOPO1.jpeg)
 
 R1:
 ~~~bash
@@ -199,6 +224,10 @@ copy running-config startup-config
 | PC4         | E3       | 192.168.47.5| 255.255.255.240 ó /28 | 192.168.47.1 |
 | PC5         | E4       | 192.168.47.6| 255.255.255.240 ó /28 | 192.168.47.1 |
 | PC6         | E5       | 192.168.47.7| 255.255.255.240 ó /28 | 192.168.47.1 |
+
+
+
+![](Imagenes/TOPO2.jpg)
 
 
 R1:
@@ -383,7 +412,16 @@ save
 
 ---
 
+
+![](Imagenes/pin.jpg)
+
+
+
 ## TOPO 3
+
+
+![](Imagenes/TOPO3.jpeg)
+
 
 | *Direccion de Red * | *#Mascara de Red* | *Primera IP Asignable * | *Ultima IP Asignable* | *Direccion de BROADCAST* | * Total Host* | *Cantidad de Host *|
 | :-- | :-- | :-- |:-- | :-- | :-- |:-- |
